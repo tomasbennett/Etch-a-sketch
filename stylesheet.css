@@ -1,10 +1,16 @@
 :root{
     font-size: 62.5%;
+
+    --default-colour: white;
+    --pen-colour: red;
+    --toggle-border: .2rem;
 }
 
 *,
 *::after,
 *::before{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -18,11 +24,190 @@ html, body{
     background-color: #0f0f0f;
     color: #ffffff;
     text-shadow: 
-        0 0 5px #ffffff,
-        0 0 5px #ffffff;
+        0 0 .5rem #ffffff;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+}
+
+h1{
+    font-size: 4rem;
+    margin-top: 2rem;
+}
+
+main{
+    width: 120.5rem;
+    height: 75vh;
+    min-height: 80rem;
+
+    margin: auto 0;
+
+    border: .2rem #ffffff solid;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem #ffffff,
+                0 0 .5rem #ffffff;
+
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    background-color: #202020;
+    border-radius: .3rem;
+    padding: 3rem;
+
+    height: 70rem;
+
+    display: flex;
+    flex-direction: column;   
+    row-gap: 13rem;
+}
+
+.container.control-panel{
+    width: 35rem;
+    margin-left: 3.5rem;
+}
+
+.settings{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.colour.settings{
+    flex: calc(3 / 4);
+}
+
+.grid.settings{
+    flex: 1;
+}
+
+
+
+.inputs{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 4rem;
+    border-radius: .4rem;
+}
+
+.inputs:not(:has(#slider-value),.colour-select){
+    cursor: pointer;
+}
+
+.inputs:not(:has(#slider-value),.colour-select):hover{
+    background-color: #353535;
+}
+
+
+
+
+.colour-select div{
+    width: 7rem;
+    height: 3.5rem;
+
+    background-position: 100% 100%;
+    background-size: 130% 130%;
+
+    border: .2rem #ffffff solid;
+    box-shadow: 
+        0 0 .5rem #ffffff;
+
+    cursor: pointer;
+}
+
+.colour.settings .colour-select div{
+    background-image: linear-gradient(135deg, white 1%, var(--pen-colour));
+}
+
+.grid.settings .colour-select div{
+    background-image: linear-gradient(135deg, white 1%, var(--default-colour));
+}
+
+  
+.slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1rem;
+
+    background-color: #ddd;
+    box-shadow: 0px 0px 3rem rgb(0, 0, 0);
+    border-radius: .5rem;
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none; 
+
+    width: 2rem;
+    aspect-ratio: 1;
+
+    background-image: linear-gradient(45deg, rgb(160, 160, 160), rgb(44, 44, 44));
+    border: .05rem solid rgb(117, 117, 117);
+    border-radius: 50%;
+    box-shadow: 0px 0px 3rem rgb(0, 0, 0);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb:active {
+    box-shadow: 0px 0px 0rem rgb(0, 0, 0);
+}
+
+
+
+
+.container.outer-etch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70rem;
+    margin: 0 auto;
+}
+
+.container:hover{
+    box-shadow: 0px 0px 3rem rgb(0, 0, 0);
+}
+
+.container.outer-etch:active{
+    box-shadow: 0px 0px 0rem rgb(0, 0, 0);
+}
+
+.inner-etch{
+    background-image: linear-gradient(135deg, white 1%, var(--default-colour));
+
+    aspect-ratio: 1;
+    height: 100%;
+
+    border: var(--toggle-border) grey dashed;
+
+    display: grid;
+}
+
+.grid-square{
+
+    background-color: var(--default-colour);
+    border: var(--toggle-border) grey dashed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar{
+    display: none;
 }

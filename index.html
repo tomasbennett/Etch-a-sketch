@@ -15,18 +15,58 @@
 
     <main>
         <div class="container control-panel">
-            <div class="inputs"></div>
-            <div class="inputs"></div>
-            <div class="inputs"></div>
-            <div class="inputs"></div>
-            <div class="inputs"></div>
-            <div class="inputs"></div>
-            <div class="inputs"></div>
+            <div class="colour settings">
+                <div class="inputs colour-select">
+                    <p>Pen colour</p>
+
+                    
+                    <div></div>
+                </div>
+                
+                <div class="inputs">
+                    Eraser
+                </div>
+                <div class="inputs">
+                    Rainbow
+                </div>
+            </div>
+
+            <div class="grid settings">
+                <div class="inputs colour-select">
+                    Default colour
+                    <div></div>
+                </div>
+                <div class="inputs">
+                    <input 
+                        type="range" 
+                        min="1" 
+                        max="8" 
+                        step="1" 
+                        value="4" 
+                        class="slider" 
+                        id="horizontal-slider"
+                    />
+                </div>
+                <div class="inputs">
+                    <p id="slider-value"></p>
+                </div>
+                <div class="inputs">
+                    Toggle grid lines
+                </div>
+            </div>
+            
+            <div class="clear settings">
+                <div class="inputs">
+                    Clear
+                </div>
+            </div>
         </div>
         
-        <div class="container etch">
-        </div>
+        <div class="container outer-etch">
+            <div class="inner-etch">
 
+            </div>
+        </div>
     </main>
 </body>
 </html>
