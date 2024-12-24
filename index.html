@@ -20,13 +20,15 @@
                     <p>Pen colour</p>
 
                     
-                    <div></div>
+                    <div class="colour-box">
+                        <input type="color"/>
+                    </div>
                 </div>
                 
-                <div class="inputs">
+                <div class="inputs" id="eraser">
                     Eraser
                 </div>
-                <div class="inputs">
+                <div class="inputs" id="rainbow-element">
                     Rainbow
                 </div>
             </div>
@@ -34,15 +36,17 @@
             <div class="grid settings">
                 <div class="inputs colour-select">
                     Default colour
-                    <div></div>
+                    <div class="colour-box">
+                        <input type="color"/>
+                    </div>
                 </div>
                 <div class="inputs">
                     <input 
                         type="range" 
                         min="1" 
-                        max="8" 
+                        max="40" 
                         step="1" 
-                        value="4" 
+                        value="22" 
                         class="slider" 
                         id="horizontal-slider"
                     />
@@ -50,7 +54,7 @@
                 <div class="inputs">
                     <p id="slider-value"></p>
                 </div>
-                <div class="inputs">
+                <div class="inputs toggle-grid" id="toggle-grid">
                     Toggle grid lines
                 </div>
             </div>

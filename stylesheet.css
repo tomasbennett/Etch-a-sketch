@@ -3,7 +3,7 @@
 
     --default-colour: white;
     --pen-colour: red;
-    --toggle-border: .2rem;
+    --toggle-border: .1rem;
 }
 
 *,
@@ -50,6 +50,22 @@ main{
 
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 80rem) {
+    main {
+        flex-direction: column;
+        justify-content: space-around;
+        row-gap: 3rem;
+
+
+        min-height: 150rem;
+        width: 80rem;
+    }
+
+    .container.control-panel{
+        margin: 0;
+    }
 }
 
 .container{
@@ -106,7 +122,7 @@ main{
 
 
 
-.colour-select div{
+.colour-select > div{
     width: 7rem;
     height: 3.5rem;
 
@@ -116,17 +132,23 @@ main{
     border: .2rem #ffffff solid;
     box-shadow: 
         0 0 .5rem #ffffff;
-
-    cursor: pointer;
 }
 
-.colour.settings .colour-select div{
+.colour.settings .colour-select > div{
     background-image: linear-gradient(135deg, white 1%, var(--pen-colour));
 }
 
-.grid.settings .colour-select div{
+.grid.settings .colour-select > div{
     background-image: linear-gradient(135deg, white 1%, var(--default-colour));
 }
+
+
+.eraser-active,
+.toggle-grid,
+.rainbow-active{
+    background-color: #353535;
+}
+
 
   
 .slider{
@@ -158,17 +180,30 @@ main{
     box-shadow: 0px 0px 0rem rgb(0, 0, 0);
 }
 
-
-
-
 .container.outer-etch{
     display: flex;
     align-items: center;
     justify-content: center;
 
     width: 70rem;
+    aspect-ratio: 1;
     margin: 0 auto;
 }
+
+
+
+.colour-box input{
+    opacity: 0;
+    
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+
+
+
 
 .container:hover{
     box-shadow: 0px 0px 3rem rgb(0, 0, 0);
@@ -179,18 +214,15 @@ main{
 }
 
 .inner-etch{
-    background-image: linear-gradient(135deg, white 1%, var(--default-colour));
+    background-color: var(--default-colour);
 
     aspect-ratio: 1;
     height: 100%;
-
-    border: var(--toggle-border) grey dashed;
 
     display: grid;
 }
 
 .grid-square{
-
     background-color: var(--default-colour);
     border: var(--toggle-border) grey dashed;
 }
