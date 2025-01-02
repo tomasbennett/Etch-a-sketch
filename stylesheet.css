@@ -15,8 +15,8 @@
 }
 
 html, body{
-    width: 100dvw;
-    height: 100dvh;
+    min-width: 100dvw;
+    min-height: 100dvh;
 
     font-size: 1.6rem;
     font-family: 'Courier New', Courier, monospace;
@@ -66,6 +66,11 @@ main{
     .container.control-panel{
         margin: 0;
     }
+}
+
+#epilepsy-warning{
+    justify-self: flex-end;
+    margin-bottom: auto;
 }
 
 .container{
