@@ -33,13 +33,13 @@ html, body{
 
 h1{
     font-size: 4rem;
-    margin-top: 2rem;
+    margin: 1rem 0;
 }
 
 main{
     width: 120.5rem;
     height: 75vh;
-    min-height: 80rem;
+    min-height: 65rem;
 
     margin: auto 0;
 
@@ -70,7 +70,7 @@ main{
 
 #epilepsy-warning{
     justify-self: flex-end;
-    margin-bottom: auto;
+    margin: 3rem 0;
 }
 
 .container{
@@ -78,11 +78,11 @@ main{
     border-radius: .3rem;
     padding: 3rem;
 
-    height: 70rem;
+    height: 60rem;
 
     display: flex;
     flex-direction: column;   
-    row-gap: 13rem;
+    row-gap: 10rem;
 }
 
 .container.control-panel{
@@ -189,8 +189,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-
-    width: 70rem;
+    
     aspect-ratio: 1;
     margin: 0 auto;
 }
@@ -205,9 +204,6 @@ main{
 
     cursor: pointer;
 }
-
-
-
 
 
 .container:hover{
