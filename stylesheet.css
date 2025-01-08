@@ -31,9 +31,19 @@ html, body{
     align-items: center;
 }
 
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    column-gap: 5rem;
+    
+    margin: 1rem 0;
+}
+
 h1{
     font-size: 4rem;
-    margin: 1rem 0;
+    
 }
 
 main{
@@ -66,11 +76,6 @@ main{
     .container.control-panel{
         margin: 0;
     }
-}
-
-#epilepsy-warning{
-    justify-self: flex-end;
-    margin: 3rem 0;
 }
 
 .container{
